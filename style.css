@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(188, 204, 219);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown input {
+    width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.list {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: aliceblue;
+    border: 1px solid azure;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.list .option {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;  
+    margin-bottom: 5px;
+}
+
+.list button {
+    margin-top: 10px;
+}
+
+.dropdown.open .list {
+    display: block;
+}
