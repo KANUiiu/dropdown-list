@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="dropdown">
-        <input type="text" placeholder="Your choices" readonly id="selected-options">
+        <input type="text" placeholder="Your choices" readonly id="choices">
         <div class="list">
             
             <form class="option">
@@ -32,7 +32,7 @@
 
     <script>
     const list = document.querySelector('.list')
-    const input = document.getElementById('selected-options')
+    const input = document.getElementById('choices')
     const okButton = document.getElementById('ok-button')
 
     input.addEventListener('click', () => {
