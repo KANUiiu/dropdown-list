@@ -1,8 +1,10 @@
 HTML方面：
+
 1. 首先寫一個dropdown的div，裡面包含一個text型態的input和一個list的div。
 2. 在list的div裡面，按照題目指示將本來的三個Option各自搭配一個checkbox型態的input，再用form包起來。最後增加一個button。
 
 JavaScript方面：
+
 A. 定義
 1. 利用querySelector方法，以class值鎖定list，並定義它為list。
 2. 為了鎖定text型態的input，回頭到HTML替他設一個id，值為choices。接著利用getElementById方法鎖定並定義它為input。
