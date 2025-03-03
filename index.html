@@ -12,17 +12,17 @@
         <div class="list">
             
             <form class="option">
-                <input type="checkbox" id="option1" value="Option 1">
+                <input type="checkbox" value="Option 1">
                 Option 1
             </form>
 
             <form class="option">
-                <input type="checkbox" id="option2" value="Option 2">
+                <input type="checkbox" value="Option 2">
                 Option 2
             </form>
 
             <form class="option">
-                <input type="checkbox" id="option3" value="Option 3">
+                <input type="checkbox" value="Option 3">
                 Option 3
             </form>
 
@@ -41,7 +41,7 @@
 
     okButton.addEventListener('click', () => {
         const selectedOptions = []
-        const checkboxes = document.querySelectorAll('.list input[type="checkbox"]')
+        const checkboxes = document.querySelectorAll('.list input')
         
         checkboxes.forEach(checkbox => {
             if (checkbox.checked) {  
