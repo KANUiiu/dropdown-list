@@ -11,52 +11,49 @@
         <input type="text" placeholder="Your choices" readonly id="selected-options">
         <div class="list">
             
-            <label for="option1" class="option">
+            <form class="option">
                 <input type="checkbox" id="option1" value="Option 1">
                 Option 1
-            </label>
+            </form>
 
-            <label for="option2" class="option">
+            <form class="option">
                 <input type="checkbox" id="option2" value="Option 2">
                 Option 2
-            </label>
+            </form>
 
-            <label for="option3" class="option">
+            <form class="option">
                 <input type="checkbox" id="option3" value="Option 3">
                 Option 3
-            </label>
+            </form>
 
             <button id="ok-button">OK</button>
         </div>
     </div>
 
     <script>
-        const dropdown = document.querySelector('.dropdown');
-        const input = document.getElementById('selected-options');
-        const okButton = document.getElementById('ok-button');
-        const list = document.querySelector('.list');
+    const dropdown = document.querySelector('.dropdown')
+    const input = document.getElementById('selected-options')
+    const okButton = document.getElementById('ok-button')
+    const list = document.querySelector('.list')
 
-        input.addEventListener('click', () => {
-            list.style.display = 'block';
-        });
+    input.addEventListener('click', () => {
+        list.style.display = 'block'
+    })
 
-        okButton.addEventListener('click', () => {
-            const selectedOptions = [];
-            const checkboxes = document.querySelectorAll('.list input[type="checkbox"]:checked');
-            
-            checkboxes.forEach(checkbox => {
-                selectedOptions.push(checkbox.value);
-            });
-
-            input.value = selectedOptions.join(', ');
-            list.style.display = 'none';
-        });
-
-        document.addEventListener('click', (event) => {
-            if (!dropdown.contains(event.target)) {
-                list.style.display = 'none';
+    okButton.addEventListener('click', () => {
+        const selectedOptions = []
+        const checkboxes = document.querySelectorAll('.list input[type="checkbox"]')
+        
+        checkboxes.forEach(checkbox => {
+            if (checkbox.checked) {  
+                selectedOptions.push(checkbox.value)
             }
         });
-    </script>
+
+        input.value = selectedOptions.join(', ')
+        list.style.display = 'none'
+    })
+</script>
+
 </body>
 </html>

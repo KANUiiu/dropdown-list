@@ -27,13 +27,14 @@ body{
 
 .list .option {
     display: flex;
-    justify-content: space-between; 
-    align-items: center;  
+    justify-content: flex-start; 
+    align-items: center;
     margin-bottom: 5px;
 }
 
 .list button {
     margin-top: 10px;
+    text-align: left; 
 }
 
 .dropdown.open .list {
